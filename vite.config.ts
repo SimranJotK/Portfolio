@@ -12,4 +12,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Use the Netlify preset so nitro runs on Netlify CI (not just Lovable sandbox).
+  // Outputs static assets to dist/ and the SSR function to .netlify/functions-internal/.
+  nitro: { preset: "netlify" },
 });
